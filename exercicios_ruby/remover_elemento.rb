@@ -1,17 +1,17 @@
 def remove_element(nums,val)
-    #criando um novo array para amazenar os numeros que não são iguais ao val
-    new_nums = []
+    # indice para controlar a posição dos elementos mantidos
+    k = 0
 
-    #percorrer cada número no array
+    #percorre o array
     nums.each do |num|
+        #se o numero atual não for igual a "val", mantem ele no inicio do array
         if num != val
-            #adiciona o numero ao novo array se ele não for igual a val
-            new_nums << num
+            nums[k] = num
+            k += 1
         end
     end
-    #retorna o array modificado, e a quantidade de numero que não são val
-    [new_nums, new_nums.length]
-end
 
+    k
+end
 
 
